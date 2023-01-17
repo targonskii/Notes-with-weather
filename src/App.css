@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/roboto-v27-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('./fonts/roboto-v27-latin-regular.eot?#iefix')
+            format('embedded-opentype'),
+        url('./fonts/roboto-v27-latin-regular.woff2') format('woff2'),
+        url('./fonts/roboto-v27-latin-regular.woff') format('woff'),
+        url('./fonts/roboto-v27-latin-regular.ttf') format('truetype'),
+        url('./fonts/roboto-v27-latin-regular.svg#Roboto') format('svg');
+    /* Legacy iOS */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    font-family: 'Roboto';
+    font-size: 15px;
+    height: 100vh;
+    padding: 25px 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(151, 151, 151);
+}
+
+.postform {
+    width: 100%;
+    height: 70%;
+}
+
+.post {
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid rgb(214 214 214);
+    border-radius: 5px;
+    min-height: 100px;
+    position: relative;
+    background-color: #fff;
+}
+
+.weather {
+    min-width: 85px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather p {
+    margin-top: 10px;
+}
+
+.close {
+    font-size: 35px;
+    color: #000000;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.add-note {
+    width: 100%;
+    height: 100px;
+}
+
+.add-note input {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgb(214 214 214);
+}
+
+.add-note input:focus {
+    outline: 0;
+}
+
+.add-note input:invalid {
+    background-color: rgb(255, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.add-note input:invalid + .message {
+    display: block;
+    font-size: 25px;
+    margin-top: 18px;
+}
+
+.message {
+    display: none;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
