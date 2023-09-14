@@ -23,7 +23,7 @@
     background-color: rgb(255, 0, 0);
 }
 
-.addNote input:invalid + .message {
+.addNote input:invalid + .add__message {
     display: block;
     margin-top: 18px;
     font-size: 25px;
@@ -31,6 +31,7 @@
 
 .add__message {
     display: none;
+    padding: 10px 20px;
     background-color: rgb(255, 0, 0);
     color: rgb(255, 255, 255);
 }

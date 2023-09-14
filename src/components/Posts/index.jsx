@@ -1,31 +1,21 @@
 import React from "react";
-import { deleteNote } from "../../Redux/actions";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { PostItem } from "../PostItem";
 
 import style from "./index.module.css";
 
 export const Posts = () => {
-    const notes = useSelector(({ notes }) => notes.notes);
-    const dispatch = useDispatch();
-
-    const deleteNoteHandler = (idArray) => {
-        dispatch(deleteNote(idArray));
-    };
+    const allNotes = useSelector(({ notes }) => notes);
 
     return (
-        <div className={style.postform}>
-            {notes.length ? (
-                notes.map((post) => (
-                    <PostItem
-                        post={post}
-                        key={post.id}
-                        onDeleteNote={() => deleteNoteHandler(post.idArray)}
-                    />
+        <article className={style.posts}>
+            {allNotes.length ? (
+                allNotes.map((post) => (
+                    <PostItem post={post} key={post.idArray} />
                 ))
             ) : (
                 <p>Empty list</p>
             )}
-        </div>
+        </article>
     );
 };

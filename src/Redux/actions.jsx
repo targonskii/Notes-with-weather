@@ -1,5 +1,5 @@
-import { CREATE_NOTE, DELETE_NOTE } from "./actionTypes";
-import { urlWeatherMinsk } from "../constants/urls";
+import { CREATE_NOTE } from "./actionTypes";
+import { urlWeatherMinsk } from "../constants/weatherUrl";
 
 export const createNote = (obj) => {
     return async (dispatch) => {
@@ -17,12 +17,5 @@ export const createNote = (obj) => {
         } catch (error) {
             console.error("Ошибка при создании заметки:", error);
         }
-    };
-};
-
-export const deleteNote = (noteId) => {
-    return {
-        type: DELETE_NOTE,
-        payload: noteId,
     };
 };
