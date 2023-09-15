@@ -2,12 +2,18 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    gap: 50px;
     min-height: 100px;
     padding: 20px 20px;
     border: 2px solid rgb(214 214 214);
     border-radius: 10px;
     margin-bottom: 20px;
     background-color: #fff;
+}
+
+.post__text {
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 .post__closeBtn {

@@ -11,7 +11,7 @@ export const Posts = () => {
         <article className={style.posts}>
             {allNotes.length ? (
                 allNotes.map((post) => (
-                    <PostItem post={post} key={post.idArray} />
+                    <PostItem post={post} key={crypto.randomUUID()} />
                 ))
             ) : (
                 <p>Empty list</p>

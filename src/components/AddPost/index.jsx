@@ -14,18 +14,20 @@ export const AddPost = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const newPost = {
-            text,
-            idArray: Date.now().toString(),
-            isoDateString: new Date().toISOString(),
-        };
+        if (text) {
+            const newPost = {
+                text,
+                isoDateString: new Date().toISOString(),
+            };
+            dispatch(createNote(newPost));
+            event.target.reset();
+        }
 
-        dispatch(createNote(newPost));
-        event.target.reset();
+        setText("");
     };
 
     return (
-        <form className={style.addNote} onSubmit={handleSubmit}>
+        <form className={style.addPostForm} onSubmit={handleSubmit}>
             <label htmlFor="note">Add note...</label>
             <input
                 className="input"

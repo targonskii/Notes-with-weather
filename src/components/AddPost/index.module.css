@@ -1,10 +1,10 @@
-.addNote {
+.addPostForm {
     width: 100%;
     height: 100px;
     margin-top: 50px;
 }
 
-.addNote input {
+.addPostForm input {
     width: 100%;
     height: 40px;
     border-top: none;
@@ -14,16 +14,16 @@
     margin: 0 auto;
 }
 
-.addNote input:focus {
+.addPostForm input:focus {
     outline: 0;
 }
 
-.addNote input:invalid {
+.addPostForm input:invalid {
     border: 1px solid rgb(255, 0, 0);
     background-color: rgb(255, 0, 0);
 }
 
-.addNote input:invalid + .add__message {
+.addPostForm input:invalid + .add__message {
     display: block;
     margin-top: 18px;
     font-size: 25px;

@@ -7,7 +7,7 @@ import style from "./index.module.css";
 export const PostItem = ({ post }) => {
     return (
         <section className={style.post}>
-            <p>{post.text}</p>
+            <p className={style.post__text}>{post.text}</p>
             <button className={style.post__closeBtn}>
                 <img src={close} alt="Close button" />
             </button>
